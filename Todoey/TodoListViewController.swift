@@ -13,10 +13,18 @@ class TodoListViewController: UITableViewController {
     @IBOutlet weak var addItemButton: UIBarButtonItem!
     
     var itemArray = [String]()
+    
+    let defaults = UserDefaults.standard
+    
     var alertAction = UIAlertAction()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "TodoListArray") as? [String] {
+            itemArray = items
+        }
+        
     }
     
     
@@ -62,10 +70,10 @@ class TodoListViewController: UITableViewController {
             if let text = textField.text {
                 if text.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
                     textField.layer.borderColor = UIColor.red.cgColor
-                    print("1")
+                    
                 }else{
-                    print("2")
                     self.itemArray.append(text)
+                    self.defaults.set(self.itemArray, forKey: "TodoListArray")
                     self.tableView.reloadData()
                 }
             }
