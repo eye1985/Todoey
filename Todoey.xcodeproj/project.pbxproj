@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A06DC80203B726C00643D24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8ADDBDEE202A64ED002C441C /* TodoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8A452A9D2033A60200FC7B2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +80,10 @@
 		8ADDBDEB202A64ED002C441C /* Todoey */ = {
 			isa = PBXGroup;
 			children = (
+				8A06DC80203B726C00643D24 /* Controller */,
 				8A452A9E2033A60F00FC7B2D /* View */,
 				8A452A9D2033A60200FC7B2D /* Model */,
 				8ADDBDEC202A64ED002C441C /* AppDelegate.swift */,
-				8ADDBDEE202A64ED002C441C /* TodoListViewController.swift */,
 				8ADDBDF3202A64ED002C441C /* Assets.xcassets */,
 				8ADDBDF5202A64ED002C441C /* LaunchScreen.storyboard */,
 				8ADDBDF8202A64ED002C441C /* Info.plist */,
